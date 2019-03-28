@@ -106,44 +106,4 @@ SOFTWARE.
     <framework src="MobileCoreServices.framework" />
   </platform>
 
-  <!-- android -->
-  <platform name="android">
-    <preference name="ANDROID_MIME_TYPES" value="text/*" />
-    <!-- <preference name="AndroidLaunchMode" value="singleTask" /> -->
-
-    <js-module src="www/openwith.js" name="openwith">
-      <clobbers target="cordova.openwith" />
-    </js-module>
-
-    <!-- <edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
-    <activity android:launchMode = "singleTask" />
-</edit-config> -->
-
-    <!-- <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-    <activity android:name="MainActivity" android:launchMode = "singleTask" />
-</edit-config> -->
-
-    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-      <intent-filter>
-        <data android:mimeType="$ANDROID_MIME_TYPES" />
-        <action android:name="android.intent.action.SEND" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-      </intent-filter>
-    </config-file>
-
-
-    <!-- Cordova >= 3.0.0 -->
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="OpenWithPlugin">
-        <param name="android-package" value="com.missiveapp.openwith.OpenWithPlugin"/>
-      </feature>
-    </config-file>
-
-    <!-- cordova plugin src files -->
-    <source-file src="src/android/com/missiveapp/openwith/OpenWithPlugin.java" target-dir="src/com/missiveapp/openwith" />
-    <source-file src="src/android/com/missiveapp/openwith/PluginResultSender.java" target-dir="src/com/missiveapp/openwith" />
-    <source-file src="src/android/com/missiveapp/openwith/Serializer.java" target-dir="src/com/missiveapp/openwith" />
-    <source-file src="src/android/com/missiveapp/openwith/ByteStreams.java" target-dir="src/com/missiveapp/openwith" />
-  </platform>
 </plugin>
