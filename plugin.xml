@@ -42,13 +42,13 @@ SOFTWARE.
   <!-- ios -->
   <platform name="ios">
     <preference name="IOS_URL_SCHEME" default="hatsa" />
-    <preference name="IOS_BUNDLE_IDENTIFIER" default="com.hatsa.iosapp" />
+    <preference name="IOS_BUNDLE_IDENTIFIER" default="com.hatsa.app" />
 
     <js-module src="www/openwith.js" name="openwith">
       <clobbers target="cordova.openwith" />
     </js-module>
 
-    <!-- IMPORTANT: 
+    <!-- IMPORTANT:
     iosPostProcessTarget reset PRODUCT_BUNDLE_IDENTIFIER to app_id+.sharedextension for the share extension. It has to be done after
     "prepare" phase because prepare.js in cordova-ios globally sets PRODUCT_BUNDLE_IDENTIFIER to that of the root project.
     -->
