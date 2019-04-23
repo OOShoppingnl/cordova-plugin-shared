@@ -26,4 +26,4 @@
 //
 
 #define SHAREEXT_GROUP_IDENTIFIER @"group.__BUNDLE_IDENTIFIER__"
-#define SHAREEXT_URL_SCHEME @hatsa
+#define SHAREEXT_URL_SCHEME @"hatsa"
