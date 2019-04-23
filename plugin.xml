@@ -42,7 +42,7 @@ SOFTWARE.
   <!-- ios -->
   <platform name="ios">
     <preference name="IOS_URL_SCHEME" default="hatsa" />
-    <preference name="IOS_BUNDLE_IDENTIFIER" default="com.hatsa.app" />
+    <preference name="IOS_BUNDLE_IDENTIFIER" default="com.hatsa.iosapp" />
 
     <js-module src="www/openwith.js" name="openwith">
       <clobbers target="cordova.openwith" />
